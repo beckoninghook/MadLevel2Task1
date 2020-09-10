@@ -8,7 +8,7 @@ import com.example.madlevel2task1.databinding.ItemPlaceBinding
 
 class PlaceAdapter(private  val places :  List<Place>) : RecyclerView.Adapter<PlaceAdapter.ViewHolder>(){
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val binding = ItemPlaceBinding.bind(itemView)
+        private val binding = ItemPlaceBinding.bind(itemView)
 
         fun databind(place : Place) {
             binding.textView.text = place.name;
