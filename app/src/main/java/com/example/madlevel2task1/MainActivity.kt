@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
 
     private val places = arrayListOf<Place>()
     private val placeAdapter = PlaceAdapter(places)
-    // Don't forget to create a binding object as you did in previous assignments.
     private lateinit var binding: ActivityMainBinding
 
 
@@ -32,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         for (i in Place.PLACE_NAMES.indices) {
 
             places.add(Place(Place.PLACE_NAMES[i], Place.PLACE_RES_DRAWABLE_IDS[i]))
-            println("place added")
         }
         placeAdapter.notifyDataSetChanged()
     }

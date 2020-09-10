@@ -10,9 +10,9 @@ class PlaceAdapter(private  val places :  List<Place>) : RecyclerView.Adapter<Pl
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = ItemPlaceBinding.bind(itemView)
 
-        fun databind(place : Place) {
-            binding.textView.text = place.name;
-            binding.imageView.setImageResource(place.imageResId);
+        fun bind(place : Place) {
+            binding.tvPlace.text = place.name;
+            binding.ivPlace.setImageResource(place.imageResId);
         }
     }
 
@@ -28,6 +28,6 @@ class PlaceAdapter(private  val places :  List<Place>) : RecyclerView.Adapter<Pl
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        holder.databind(places[position]);
+        holder.bind(places[position]);
     }
 }
